@@ -10,15 +10,15 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "dm_sex")
-public class DmSex implements Serializable {
-
+@Table(name="dm_position")
+public class DmPosition implements Serializable {
+	
+	
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6889484202489078119L;
-	
-	
+	private static final long serialVersionUID = 7661829096396209349L;
+
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -42,5 +42,4 @@ public class DmSex implements Serializable {
 	private String name ;
 	
 	
-
 }

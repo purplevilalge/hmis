@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
+import com.hongmeng.is.models.CustomerEmployee;
 import com.hongmeng.is.models.DmSex;
 import com.hongmeng.is.repositories.TestRepository;
 
@@ -42,6 +43,13 @@ public class TestRepositoryImpl extends HibernateDaoSupport implements TestRepos
 		
 		return list ;
 		
+	}
+
+	@Override
+	public List<CustomerEmployee> getCustomerEmployeeAll() {
+		// TODO Auto-generated method stub
+		List<CustomerEmployee> list = this.getHibernateTemplate().loadAll(CustomerEmployee.class) ;
+		return list;
 	}
 
 }

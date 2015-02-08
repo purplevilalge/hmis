@@ -13,7 +13,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.hongmeng.is.models.DmSex;
+import com.hongmeng.is.models.CustomerEmployee;
 import com.hongmeng.is.services.TestService;
 
 /**
@@ -40,8 +40,8 @@ public class HomeController {
 		
 		String formattedDate = dateFormat.format(date);
 		
-		List<DmSex> list = testService.getDmSexAll() ;
-		
+//		List<DmSex> list = testService.getDmSexAll() ;
+		List<CustomerEmployee> list = testService.getCustomerEmployeeAll() ;
 		
 		model.addAttribute("serverTime", formattedDate );
 		
