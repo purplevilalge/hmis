@@ -15,14 +15,14 @@ public class IndexController {
 	private static final Logger logger = LoggerFactory
 			.getLogger(IndexController.class);
 
-	static final private String prefixTplPath = "admin/";
+	static final private String prefixViewTplPath = "admin/";
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String index(Locale locale, Model model) {
 		
 		model.addAttribute("vvv", "this is a test value passed by controller.") ;
 
-		return prefixTplPath + "index";
+		return prefixViewTplPath + "index";
 	}
 
 }
