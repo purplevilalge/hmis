@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.hongmeng.is.models.CustomerEmployee;
 import com.hongmeng.is.models.DmSex;
+import com.hongmeng.is.models.Project;
 import com.hongmeng.is.repositories.TestRepository;
 
 
@@ -26,5 +27,9 @@ public class TestService {
 	public List<CustomerEmployee> getCustomerEmployeeAll() {
 		
 		return testRepository.getCustomerEmployeeAll() ;
+	}
+	
+	public List<Project> getProjectAll() {
+		return testRepository.getProjectAll() ;
 	}
 }

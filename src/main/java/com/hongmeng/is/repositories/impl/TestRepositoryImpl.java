@@ -11,6 +11,7 @@ import org.springframework.stereotype.Repository;
 
 import com.hongmeng.is.models.CustomerEmployee;
 import com.hongmeng.is.models.DmSex;
+import com.hongmeng.is.models.Project;
 import com.hongmeng.is.repositories.TestRepository;
 
 @Repository("testRepository")
@@ -52,4 +53,11 @@ public class TestRepositoryImpl extends HibernateDaoSupport implements TestRepos
 		return list;
 	}
 
+	@Override
+	public List<Project> getProjectAll() {
+		// TODO Auto-generated method stub
+		return this.getHibernateTemplate().loadAll(Project.class);
+	}
+
+	
 }
