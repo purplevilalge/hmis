@@ -1,4 +1,4 @@
-package com.hongmeng.is.models;
+package com.hongmeng.is.bo;
 
 import java.io.Serializable;
 
@@ -10,13 +10,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 
 @Entity
 @Table(name="employee")
-public class Employee implements Serializable {
+public class TYgxx implements Serializable {
 
 	/**
 	 * 
@@ -25,10 +24,10 @@ public class Employee implements Serializable {
 	
 	private Integer id;
 	private String name ;
-    private DmPosition position ;
+    private TDmZw zwDm ;
     private String phone ;
     private String mobile ;
-    private DmSex sex ;
+    private TDmSex sexDm ;
 //    private User user ;
 	
 	@Id
@@ -42,14 +41,14 @@ public class Employee implements Serializable {
 		this.id = id;
 	}
 
-    @ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity=DmPosition.class )
+    @ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity=TDmZw.class )
     @JoinColumn(name="position_dm")
-	public DmPosition getPosition() {
-		return position;
+	public TDmZw getZwDm() {
+		return zwDm;
 	}
 
-	public void setPosition(DmPosition position) {
-		this.position = position;
+	public void setZwDm(TDmZw zwDm) {
+		this.zwDm = zwDm;
 	}
 
 	public String getPhone() {
@@ -69,14 +68,14 @@ public class Employee implements Serializable {
 	}
 
 	
-    @ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity=DmSex.class )
+    @ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity=TDmSex.class )
     @JoinColumn(name="sex_dm")
-	public DmSex getSex() {
-		return sex;
+	public TDmSex getSexDm() {
+		return sexDm;
 	}
 
-	public void setSex(DmSex sex) {
-		this.sex = sex;
+	public void setSexDm(TDmSex sexDm) {
+		this.sexDm = sexDm;
 	}
 
 	@Column(name="name")

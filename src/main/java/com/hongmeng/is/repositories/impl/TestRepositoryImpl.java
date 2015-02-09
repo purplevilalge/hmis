@@ -1,17 +1,10 @@
 package com.hongmeng.is.repositories.impl;
 
-import java.util.List;
-
-import javax.transaction.Transactional;
-
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 import org.springframework.stereotype.Repository;
 
-import com.hongmeng.is.models.CustomerEmployee;
-import com.hongmeng.is.models.DmSex;
-import com.hongmeng.is.models.Project;
 import com.hongmeng.is.repositories.TestRepository;
 
 @Repository("testRepository")
@@ -21,43 +14,5 @@ public class TestRepositoryImpl extends HibernateDaoSupport implements TestRepos
 	public void setMySessionFactory(SessionFactory sessionFactory){
 		super.setSessionFactory(sessionFactory);
 	}
-	
-//    @Autowired
-//    private SessionFactory sessionFactory;  
-	
-	@Override
-	public List<DmSex> getDmSexAll() {
-//
-//		Session session = sessionFactory.getCurrentSession() ;
-//
-////		session.beginTransaction() ;
-//		
-//		List<DmSex> list = session.createQuery("from DmSex").list();
-//		
-////		session.getTransaction().commit() ;
-		
-//		this.getHibernateTemplate().getSessionFactory().getCurrentSession().beginTransaction() ;
-		
-		List<DmSex> list = this.getHibernateTemplate().loadAll(DmSex.class) ;
-		
-//		this.getHibernateTemplate().getSessionFactory().getCurrentSession().getTransaction().commit(); 
-		
-		return list ;
-		
-	}
-
-	@Override
-	public List<CustomerEmployee> getCustomerEmployeeAll() {
-		// TODO Auto-generated method stub
-		List<CustomerEmployee> list = this.getHibernateTemplate().loadAll(CustomerEmployee.class) ;
-		return list;
-	}
-
-	@Override
-	public List<Project> getProjectAll() {
-		// TODO Auto-generated method stub
-		return this.getHibernateTemplate().loadAll(Project.class);
-	}
-
 	
 }

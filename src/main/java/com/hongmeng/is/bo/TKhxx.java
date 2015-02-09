@@ -1,4 +1,4 @@
-package com.hongmeng.is.models;
+package com.hongmeng.is.bo;
 
 import java.io.Serializable;
 
@@ -10,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer")
-public class Customer implements Serializable {
+@Table(name="t_khxx")
+public class TKhxx implements Serializable {
 
 	/**
 	 * 
@@ -49,14 +49,14 @@ public class Customer implements Serializable {
 	}
 	private String address ;
 
-	@Column(name="post_code")
-	public String getPostCode() {
-		return postCode;
+	@Column(name="yb")
+	public String getYb() {
+		return yb;
 	}
 
-	public void setPostCode(String postCode) {
-		this.postCode = postCode;
+	public void setYb(String yb) {
+		this.yb = yb;
 	}
-	private String postCode ;
+	private String yb ;
 	
 }

@@ -31,7 +31,7 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:hibernate.cfg.xml" />
         <!-- 配置sessionFactory扫描models包下的所有类。 -->
-        <property name="packagesToScan" value="com.hongmeng.is.models" />
+        <property name="packagesToScan" value="com.hongmeng.is.bo" />
     </bean>
     <bean id="transactionManager"
         class="org.springframework.orm.hibernate4.HibernateTransactionManager">

@@ -2,7 +2,6 @@ package com.hongmeng.is.controllers;
 
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 import org.slf4j.Logger;
@@ -13,7 +12,6 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.hongmeng.is.models.Project;
 import com.hongmeng.is.services.TestService;
 
 /**
@@ -43,7 +41,7 @@ public class HomeController {
 //		List<DmSex> list = testService.getDmSexAll() ;
 //		List<CustomerEmployee> list = testService.getCustomerEmployeeAll() ;
 		
-		List<Project> list = testService.getProjectAll() ;
+//		List<Project> list = testService.getProjectAll() ;
 		
 		model.addAttribute("serverTime", formattedDate );
 		

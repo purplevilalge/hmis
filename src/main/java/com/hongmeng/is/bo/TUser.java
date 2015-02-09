@@ -1,4 +1,4 @@
-package com.hongmeng.is.models;
+package com.hongmeng.is.bo;
 
 import java.io.Serializable;
 
@@ -13,8 +13,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
-public class User implements Serializable {
+@Table(name = "t_user")
+public class TUser implements Serializable {
 
 	/**
 	 * 
@@ -24,7 +24,7 @@ public class User implements Serializable {
 	private Integer id;
 	private String username;
 	private String passwd;
-	private Employee employee;
+	private TYgxx ygxx;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -56,13 +56,13 @@ public class User implements Serializable {
 	}
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "employee_id")
-	public Employee getEmployee() {
-		return employee;
+	@JoinColumn(name = "ygxx_id")
+	public TYgxx getYgxx() {
+		return ygxx;
 	}
 
-	public void setEmployee(Employee employee) {
-		this.employee = employee;
+	public void setYgxx(TYgxx ygxx) {
+		this.ygxx = ygxx;
 	}
 
 	public static long getSerialversionuid() {
