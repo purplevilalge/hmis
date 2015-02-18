@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
    <h1>当前项目列表</h1>
 
@@ -33,10 +34,10 @@
           </tr>
         </thead>
         <tbody>
-        
+        <c:forEach var="xm" items="${allXm }" >
           <tr>
-            <td>i.id(</td>
-            <td>i.name(</td>
+            <td>${xm.id } </td>
+            <td>${xm.name }</td>
             <td>i.setupDate(</td>
             <td>i.finishedDate(</td>
             <td>i.belongTo(</td>
@@ -49,8 +50,7 @@
               Remove
             </td>
           </tr>
-          
-          
+        </c:forEach>
         </tbody>
       </table>
     </div>

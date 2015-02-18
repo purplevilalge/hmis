@@ -1,4 +1,4 @@
-package com.hongmeng.is.bo;
+package com.hongmeng.is.common.bo;
 
 import java.io.Serializable;
 
@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 
 @Entity
-@Table(name="employee")
+@Table(name="t_ygxx")
 public class TYgxx implements Serializable {
 
 	/**
@@ -42,7 +42,7 @@ public class TYgxx implements Serializable {
 	}
 
     @ManyToOne( cascade = {CascadeType.PERSIST, CascadeType.MERGE}, targetEntity=TDmZw.class )
-    @JoinColumn(name="position_dm")
+    @JoinColumn(name="zw_dm")
 	public TDmZw getZwDm() {
 		return zwDm;
 	}

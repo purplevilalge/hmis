@@ -1,4 +1,4 @@
-package com.hongmeng.is.bo;
+package com.hongmeng.is.common.bo;
 
 import java.io.Serializable;
 
@@ -10,17 +10,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "t_dm_sex")
-public class TDmSex implements Serializable {
+@Table(name="t_dm_bm")
+public class TDmBm implements Serializable {
 
 	/**
 	 * 
 	 */
-	private static final long serialVersionUID = 6889484202489078119L;
-	
+	private static final long serialVersionUID = 8280002064764816607L;
+
 	private Integer id;
 	private String name ;
-
+	
 	@Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
@@ -31,7 +31,7 @@ public class TDmSex implements Serializable {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-
+	
 	@Column(name="name")
 	public String getName() {
 		return name;

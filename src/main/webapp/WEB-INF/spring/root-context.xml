@@ -20,9 +20,7 @@
 
 	<!-- Root Context: defines shared resources visible to all other web components -->
 	<context:annotation-config />
-    <context:component-scan base-package="com.hognmeng.is" />
-	
-	
+		
 	<!-- 该 BeanPostProcessor 将自动对标注 @Autowired 的 Bean 进行注入 -->
 	<bean
 		class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor" />
@@ -31,7 +29,7 @@
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
         <property name="configLocation" value="classpath:hibernate.cfg.xml" />
         <!-- 配置sessionFactory扫描models包下的所有类。 -->
-        <property name="packagesToScan" value="com.hongmeng.is.bo" />
+        <property name="packagesToScan" value="com.hongmeng.is.common.bo" />
     </bean>
     <bean id="transactionManager"
         class="org.springframework.orm.hibernate4.HibernateTransactionManager">
@@ -57,5 +55,9 @@
     <aop:aspectj-autoproxy proxy-target-class="true" />
      
     <tx:annotation-driven />
-    <context:component-scan base-package="com.hongmeng.is" />
+    
+    <context:component-scan base-package="com.hongmeng.is">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />  
+    </context:component-scan>
+    
 </beans>

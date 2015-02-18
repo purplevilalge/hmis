@@ -1,4 +1,4 @@
-package com.hongmeng.is.bo;
+package com.hongmeng.is.common.bo;
 
 import java.io.Serializable;
 
