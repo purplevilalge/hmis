@@ -19,6 +19,7 @@
 		<hibernate-c3p0-version>4.3.8.Final</hibernate-c3p0-version>
 		<org.aspectj-version>1.8.5</org.aspectj-version>
 		<shiro-version>1.2.3</shiro-version>
+		<taglibs-version>1.1.2</taglibs-version>
 	</properties>
 	<dependencies>
 		<!-- Spring -->
@@ -196,6 +197,12 @@
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-spring</artifactId>
 			<version>${shiro-version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>${taglibs-version}</version>
 		</dependency>
 	</dependencies>
     <build>

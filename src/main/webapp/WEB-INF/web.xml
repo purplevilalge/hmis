@@ -56,5 +56,11 @@
 	</filter-mapping>
 	 -->
 	
+	<jsp-config>  
+	    <taglib>  
+	        <taglib-uri>http://www.hongmeng-info.com/tags</taglib-uri>  
+	        <taglib-location>/WEB-INF/hm_tags.tld</taglib-location>  
+	    </taglib>  
+  	</jsp-config>  
 
 </web-app>
