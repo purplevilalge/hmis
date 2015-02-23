@@ -10,7 +10,7 @@
 
 编辑
 <br/>
-项目id:${xmId }
+项目id:${xm.id }
 
 </body>
 </html>

@@ -20,5 +20,5 @@ public class XmRepositoryImpl extends HmBaseRepositoryImpl<TXm> implements XmRep
 		return this.logger;
 	}
 
-	
+
 }

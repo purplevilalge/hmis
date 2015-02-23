@@ -34,5 +34,10 @@ public class XmService extends HmBaseService<TXm> {
 		return this.logger;
 	}
 
+	@Override
+	public TXm findById(Integer id) {
+		return xmRepository.findById(id);
+	}
+
     
 }

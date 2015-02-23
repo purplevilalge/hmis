@@ -9,6 +9,7 @@ import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.orm.hibernate4.support.HibernateDaoSupport;
 
+import com.hongmeng.is.common.bo.TXm;
 import com.hongmeng.is.repositories.HmBaseRepository;
 
 public abstract class HmBaseRepositoryImpl<T> extends HibernateDaoSupport implements HmBaseRepository<T> {
@@ -41,5 +42,10 @@ public abstract class HmBaseRepositoryImpl<T> extends HibernateDaoSupport implem
 		return (List<T>) this.getHibernateTemplate().loadAll(this.entityClass) ;
 		
 	}
-
+	
+	@Override
+	public T findById(Integer id) {
+		
+		return this.getHibernateTemplate().load(this.entityClass, id) ;
+	}
 }

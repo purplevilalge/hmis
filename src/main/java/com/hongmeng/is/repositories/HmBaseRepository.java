@@ -8,6 +8,14 @@ public interface HmBaseRepository<T> {
 	 * 
 	 * @return
 	 */
-	List<T> findAll() ;
+	public List<T> findAll() ;
+	
+	/**
+	 * 根据实体id查找实体
+	 * 
+	 * @param id
+	 * @return
+	 */
+	public T findById(Integer id) ;
 
 }

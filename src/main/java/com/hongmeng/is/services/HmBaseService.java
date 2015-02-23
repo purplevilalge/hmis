@@ -8,5 +8,7 @@ public abstract class HmBaseService<T> {
 
 	public abstract List<T> findAll() ;
 	
+	public abstract T findById(Integer id) ;
+	
 	public abstract Logger getLogger() ; 
 }
